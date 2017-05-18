@@ -29,4 +29,28 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintVertical_bias="0.6"/>
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="512dp"
+        android:layout_height="557dp"
+        app:srcCompat="@drawable/splash2"
+        tools:layout_editor_absoluteX="-65dp"
+        tools:layout_editor_absoluteY="-12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bpush_message"
+        tools:layout_editor_absoluteY="356dp"
+        tools:layout_editor_absoluteX="148dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 </android.support.constraint.ConstraintLayout>
