@@ -35,6 +35,7 @@ public class FireBaseDBManager implements Json_API{
 
     @Override
     public List<Notification> getAll(String pid) {
+
         return null;
     }
 
