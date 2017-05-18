@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     Button pushMe, pushMe2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         pushMe = (Button)findViewById(R.id.pressButton);
