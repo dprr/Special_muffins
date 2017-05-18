@@ -1,0 +1,71 @@
+{
+  "alarms" : {
+    "dtime" : {
+      "dnfId" : "dpId"
+    }
+  },
+  "changeNf" : {
+    "dnfId" : {
+      "dfied name" : "dnewInfo"
+    }
+  },
+  "deleteNf" : {
+    "demo" : 0,
+    "nfId" : "dpid"
+  },
+  "newNf" : {
+    "1" : {
+      "body" : "a",
+      "name" : "b",
+      "pid" : 13,
+      "time" : "7.sunmon.2030.2130"
+    },
+    "2" : {
+      "body" : "what",
+      "name" : "c",
+      "pid" : 100,
+      "time" : "7.tuethu.1100.1159"
+    },
+    "-KkQsDdigdb2TvteTjmQ" : {
+      "body" : "yuhu!",
+      "name" : "dddd",
+      "pid" : "asdansod",
+      "time" : "7.fri.2030.2200"
+    },
+    "dnfId" : {
+      "body" : "dbody",
+      "name" : "dname",
+      "pid" : "id of phone that called",
+      "time" : "dtime"
+    },
+    "nextNfId" : {
+      "nfId" : "2"
+    }
+  },
+  "nfAlarms" : {
+    "dnfId" : {
+      "alarms" : [ "dtime1", "dtime2" ]
+    }
+  },
+  "nfInfo" : {
+    "dnfId" : {
+      "body" : "dbody",
+      "name" : "dname",
+      "pId" : "name of id",
+      "time" : "freq.days.startTime.endTime"
+    }
+  },
+  "pId" : {
+    "dinternal id" : {
+      "curId" : "dcur phone id"
+    }
+  },
+  "pNf" : {
+    "dpId" : {
+      "nfIDs" : [ "dnf1", "dnf2" ]
+    }
+  },
+  "newP" : {
+	"pid" : 0
+	}
+}

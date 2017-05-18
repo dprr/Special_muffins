@@ -1,0 +1,22 @@
+{
+  "nfInfo" : {
+	"dnfId" : {
+		"dnfVarName" : "dnfVarInfo"
+	}
+  },
+  
+	
+		
+  "pId" : {
+    "dinternal id" {
+		"curId" : "dcur phone id"
+	}
+  },
+  
+  
+  
+  "test_noam" : {
+    "first" : "something",
+    "second" : 5
+  }
+}

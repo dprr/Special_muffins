@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "759149590529",
+    "firebase_url": "https://special-muffins-12d5c.firebaseio.com",
+    "project_id": "special-muffins-12d5c",
+    "storage_bucket": "special-muffins-12d5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759149590529:android:fbc9c4bdc2b1a4d8",
+        "android_client_info": {
+          "package_name": "specialmuffins.huji.hackathon.happyreminder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759149590529-vcnr2d24is0i82sdkv2r0ro8leigr9eh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0LY_7nBvFPv0SF4UsCXMQ5a2XLoRebus"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
