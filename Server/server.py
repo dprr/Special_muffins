@@ -21,7 +21,8 @@ def randomize_time(alarm):
 
 
 def get_new_alarms():
-    requests.get(server_name + '/newNF/dnfId').json()
+    newNF = requests.get(server_name + '/newNF')
+    return 'hi'
 
 
 
@@ -29,7 +30,7 @@ def alarm_phone(signum, frame):
     pass
 
 def set_alarm(alarm):
-
+    pass
 
 
 def run_server():
@@ -38,3 +39,5 @@ def run_server():
         for alarm in new_alarms:
             alarm_time = randomize_time(alarm)
             break
+
+print(get_new_alarms())
