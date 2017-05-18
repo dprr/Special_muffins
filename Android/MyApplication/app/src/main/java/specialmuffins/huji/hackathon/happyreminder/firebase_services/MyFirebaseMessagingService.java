@@ -18,9 +18,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         super.onMessageReceived(remoteMessage);
 
         // todo get the unique string
-
+        /*
         String uniqueString;
         SkeletonAlert a = FireBaseDBManager.getManager().getAllSkeletons().get(uniqueString);
+        */
 
         // todo build notification to screen
     }
