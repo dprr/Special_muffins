@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HappyReminder</string>
+    <string name="main_message">Under construction</string>
+    <string name="push_message">Is Trump president</string>
 </resources>
