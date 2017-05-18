@@ -1,6 +1,7 @@
 package specialmuffins.huji.hackathon.happyreminder.firebase_db;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,19 +40,7 @@ public class FireBaseDBManager implements Json_API{
 
     @Override
     public void getNf(String pid, String nfId, final WorkWithNotification callback) {
-//        db.child("nfInfo").child(nfId).addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                Notification a = new Notification();
-//                a = dataSnapshot.getValue(Notification.class);
-//                callback.onNotificationReady(a);
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
+        Log.d("DB MANAGER", "starting get()");
         db.child("nfInfo").child(nfId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -101,6 +90,7 @@ public class FireBaseDBManager implements Json_API{
 
     @Override
     public int changeCurPId(String pid, String CurPId) {
+        db.child("pId").child(pid).child(CurPId).setValue(CurPId);
         return 0;
     }
 }
