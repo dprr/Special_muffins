@@ -10,7 +10,7 @@ import android.provider.Settings.Secure;
 public class Info {
     @SuppressLint("HardwareIds")
     public static String constId;
-    static void init(Context context) {
+    public static void init(Context context) {
         constId = Secure.getString(context.getContentResolver(), Secure.ANDROID_ID);
     }
 }

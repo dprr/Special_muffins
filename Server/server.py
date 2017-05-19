@@ -78,3 +78,6 @@ def run_server():
         edit_alarms()
         check_for_alerts()
         time.sleep(300)
+
+if __name__ == '__main__':
+    run_server()
