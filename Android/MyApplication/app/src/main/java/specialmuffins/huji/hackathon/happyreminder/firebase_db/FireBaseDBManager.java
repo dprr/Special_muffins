@@ -77,10 +77,25 @@ public class FireBaseDBManager {
         db.updateChildren(updates, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                allSkeletons.put(uniqueSkeletonId, newbie);
                 callback.onSkeletonAdded(newbie, uniqueSkeletonId);
             }
         });
     }
+
+    public void updateSkeleton(final SkeletonAlert toUpdate, final AddSkeletonCallback callback) {
+        final String uniqueSkeletonId = db.child("skeleton").push().getKey();
+        HashMap<String, Object> updates = new HashMap<>();
+        updates.put("/skeleton/" + uniqueSkeletonId, toUpdate);
+        updates.put("/editedSkeleton/" + uniqueSkeletonId, uniqueSkeletonId);
+        db.updateChildren(updates, new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                callback.onSkeletonAdded(toUpdate, uniqueSkeletonId);
+            }
+        });
+    }
+
 
 
     public void updatePhoneNumber(PhoneEntity toUpdate) {

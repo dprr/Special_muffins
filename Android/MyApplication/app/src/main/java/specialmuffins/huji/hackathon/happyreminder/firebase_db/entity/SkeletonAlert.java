@@ -16,7 +16,7 @@ public class SkeletonAlert {
 
         public String reminderTxt;
         public int goodDeedsCounter = 0;
-        public String possibleDays = "0001111";
+        public String possibleDays = "0000000";
         public String startHour = "10:00";
         public String endHour = "16:30";
         public String nextAlertId;

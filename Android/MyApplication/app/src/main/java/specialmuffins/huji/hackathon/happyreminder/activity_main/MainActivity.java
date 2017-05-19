@@ -14,9 +14,14 @@ import java.util.ArrayList;
 import specialmuffins.huji.hackathon.happyreminder.OneSkeletonActivity;
 import specialmuffins.huji.hackathon.happyreminder.R;
 import specialmuffins.huji.hackathon.happyreminder.firebase_db.FireBaseDBManager;
+import specialmuffins.huji.hackathon.happyreminder.firebase_db.entity.SkeletonAlert;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
+    private static final int REQUEST_START_ACTIVITY_WORK_ON_SKELETON = 678;
+
+
+    SkeletonAlertAdapter mAdapter;
 
 
     @Override
@@ -26,20 +31,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.main_rcv_skeletons);
 
-        SkeletonAlertAdapter adapter = new SkeletonAlertAdapter(new ArrayList<>(FireBaseDBManager.getManager().getAllSkeletons().values()));
+        mAdapter = new SkeletonAlertAdapter(new ArrayList<>(FireBaseDBManager.getManager().getAllSkeletons().values()), this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(mAdapter);
 
         View plusView = findViewById(R.id.main_fab);
         plusView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, OneSkeletonActivity.class));
+                startActivityForResult(new Intent(MainActivity.this, OneSkeletonActivity.class), REQUEST_START_ACTIVITY_WORK_ON_SKELETON);
+                OneSkeletonActivity.skeletonAlertToWorkWith = new SkeletonAlert();
+                OneSkeletonActivity.isSkeletonNew = true;
             }
         });
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_START_ACTIVITY_WORK_ON_SKELETON) {
+            mAdapter.updateSkeletons(new ArrayList<SkeletonAlert>(FireBaseDBManager.getManager().getAllSkeletons().values()));
+        }
+        super.onActivityResult(requestCode, resultCode, data);
 
     }
 }

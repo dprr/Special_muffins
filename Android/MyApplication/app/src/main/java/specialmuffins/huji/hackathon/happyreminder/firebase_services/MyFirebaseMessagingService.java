@@ -54,6 +54,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 NotificationManager mManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 mManager.notify(mNotificationId, myB.build());
                 mNotificationId++;
+                OneSkeletonActivity.skeletonAlertToWorkWith = skeletonAlert;
+                OneSkeletonActivity.isSkeletonNew = false;
 
             }
         });
