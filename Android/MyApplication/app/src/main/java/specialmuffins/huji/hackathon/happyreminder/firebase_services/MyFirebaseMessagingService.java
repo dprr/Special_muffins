@@ -35,8 +35,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         FirebasePhoneIdService.updateIfNeeded();
 
 
-
-
         FireBaseDBManager.getManager().getSkeleton(skeletonId, new FireBaseDBManager.SkeletonReadyCallback() {
             @Override
             public void onSkeletonReady(SkeletonAlert skeletonAlert) {
@@ -52,42 +50,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 myB.setSmallIcon(R.mipmap.ic_launcher);
                 myB.setContentText(skeletonAlert.reminderTxt);
                 myB.setContentTitle("Reminder!");
-                int mNotificationId = 001;
+
                 NotificationManager mManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 mManager.notify(mNotificationId, myB.build());
+                mNotificationId++;
 
-
-
-
-
-
-
-
-//                Intent resultIntent = new Intent(getApplication(), MainActivity.class);
-//
-//// Because clicking the notification opens a new ("special") activity, there's
-//// no need to create an artificial back stack.
-//                PendingIntent resultPendingIntent =
-//                        PendingIntent.getActivity(
-//                                getApplicationContext(),
-//                                0,
-//                                resultIntent,
-//                                PendingIntent.FLAG_UPDATE_CURRENT
-//                        );
-//
-//
-//
-//                NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext());
-//                mBuilder.setContentTitle("Reminder!");
-//                mBuilder.setContentText(skeletonAlert.reminderTxt);
-//                mBuilder.setSmallIcon(R.mipmap.ic_launcher);
-//                int mNotificationId = 001;
-//                NotificationManager mNotifyMgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-//                mBuilder.setContentIntent(resultPendingIntent);
-//                mNotifyMgr.notify(mNotificationId, mBuilder.build());
             }
         });
-
-
     }
+    static int mNotificationId = 001;
 }
