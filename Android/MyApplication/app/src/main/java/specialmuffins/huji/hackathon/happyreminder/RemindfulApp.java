@@ -25,6 +25,6 @@ public class RemindfulApp extends Application {
         FireBaseDBManager.init(this);
         FirebasePhoneIdService.updateIfNeeded();
 
-        Log.d(TAG, "created!");
+        Log.d(TAG, "" + Info.constId);
     }
 }
