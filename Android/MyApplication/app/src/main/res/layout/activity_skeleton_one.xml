@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/edt_skeleton_title"
+            android:inputType="text"
+            android:hint="Set a Random Reminder..." />
+
+        <CheckBox
+            android:text="Sunday?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_skeleton_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cbx_skeleton_sunday" />
+
+        <CheckBox
+            android:text="Monday?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbx_skeleton_sunday"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cbx_skeleton_monday" />
+
+        <CheckBox
+            android:text="Tuesday?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbx_skeleton_monday"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cbx_skeleton_tuesday" />
+
+        <CheckBox
+            android:text="Wednesday?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbx_skeleton_tuesday"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cbx_skeleton_wednesday" />
+
+        <CheckBox
+            android:text="Thursday?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbx_skeleton_wednesday"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cbx_skeleton_thursday" />
+
+        <CheckBox
+            android:text="Friday?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbx_skeleton_thursday"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cbx_skeleton_friday" />
+
+        <CheckBox
+            android:text="Saturday?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbx_skeleton_friday"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cbx_skeleton_saturday" />
+
+        <ImageView
+            android:id="@+id/iv_skeleton_start"
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_start_alarm_24"
+            android:layout_below="@+id/cbx_skeleton_saturday"
+            android:layout_marginTop="16dp"
+            />
+        <TextView
+            android:id="@+id/tv_skeleton_start"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_toRightOf="@+id/iv_skeleton_start"
+            android:layout_toEndOf="@+id/iv_skeleton_start"
+            android:layout_alignTop="@+id/iv_skeleton_start"
+            android:layout_alignBottom="@+id/iv_skeleton_start"
+            android:gravity="center"
+            android:text="Start Time: "
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
+            android:id="@+id/tv_skeleton_start_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_toRightOf="@+id/tv_skeleton_start"
+            android:layout_toEndOf="@+id/tv_skeleton_start"
+            android:layout_alignTop="@+id/tv_skeleton_start"
+            android:layout_alignBottom="@+id/tv_skeleton_start"
+            android:gravity="center"
+            android:text="10:00"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp" />
+
+        <ImageView
+            android:id="@+id/iv_skeleton_end"
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_start_alarm_24"
+            android:layout_below="@+id/iv_skeleton_start"
+            android:layout_marginTop="16dp"
+            />
+        <TextView
+            android:id="@+id/tv_skeleton_end"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_toRightOf="@+id/iv_skeleton_end"
+            android:layout_toEndOf="@+id/iv_skeleton_end"
+            android:layout_alignTop="@+id/iv_skeleton_end"
+            android:layout_alignBottom="@+id/iv_skeleton_end"
+            android:gravity="center"
+            android:text="End Time: "
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
+            android:id="@+id/tv_skeleton_end_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_toRightOf="@+id/tv_skeleton_end"
+            android:layout_toEndOf="@+id/tv_skeleton_end"
+            android:layout_alignTop="@+id/tv_skeleton_end"
+            android:layout_alignBottom="@+id/tv_skeleton_end"
+            android:gravity="center"
+            android:text="16:30"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/ic_done_black_24dp"
+        android:tint="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        app:srcCompat="@drawable/ic_clear_black_24dp"
+        android:tint="@android:color/black"
+        android:backgroundTint="@color/darkGrayBackground"
+        />
+
+</RelativeLayout>
