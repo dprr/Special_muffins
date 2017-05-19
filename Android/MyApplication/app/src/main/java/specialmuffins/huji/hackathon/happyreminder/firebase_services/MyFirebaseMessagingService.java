@@ -1,5 +1,7 @@
 package specialmuffins.huji.hackathon.happyreminder.firebase_services;
 
+import android.os.Handler;
+import android.os.Vibrator;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -57,8 +59,22 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 OneSkeletonActivity.skeletonAlertToWorkWith = skeletonAlert;
                 OneSkeletonActivity.isSkeletonNew = false;
 
+                vibrate();
             }
         });
     }
+
+    private void vibrate() {
+
+        final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(400);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                v.vibrate(1200);
+            }
+        }, 650);
+    }
+
     static int mNotificationId = 001;
 }
