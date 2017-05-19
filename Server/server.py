@@ -3,8 +3,9 @@ import time
 import json
 import random
 import requests
-server_name = 'https://special-muffins-12d5c.firebaseio.com/'
 
+from checkalerts import check_for_alerts
+server_name = 'https://special-muffins-12d5c.firebaseio.com/'
 
 
 def parse_hour(skeleton):
@@ -71,11 +72,9 @@ def edit_alarms():
         requests.delete(server_name + 'editedSkeleton/' + skeleton_id + '.json')
 
 
-edit_alarms()
-
-
 def run_server():
     while True:
         create_new_alarms()
         edit_alarms()
+        check_for_alerts()
         time.sleep(300)

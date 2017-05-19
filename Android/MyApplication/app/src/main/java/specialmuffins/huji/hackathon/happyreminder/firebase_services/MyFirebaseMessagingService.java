@@ -1,5 +1,7 @@
 package specialmuffins.huji.hackathon.happyreminder.firebase_services;
 
+import android.app.NotificationManager;
+import android.support.v4.app.NotificationCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -16,13 +18,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
+        String skeletonId = remoteMessage.getData().get("skeletonId");
+        SkeletonAlert alert = FireBaseDBManager.getManager().getAllSkeletons().get(skeletonId);
 
-        // todo get the unique string
-        /*
-        String uniqueString;
-        SkeletonAlert a = FireBaseDBManager.getManager().getAllSkeletons().get(uniqueString);
-        */
-
-        // todo build notification to screen
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this).setContentTitle(alert.reminderTxt);
+        int mNotificationId = 001;
+        NotificationManager mNotifyMgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        mNotifyMgr.notify(mNotificationId, mBuilder.build());
     }
 }
